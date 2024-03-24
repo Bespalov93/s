@@ -1,0 +1,185 @@
+.Rate{
+    display: flex;
+    justify-content: space-around;
+}
+.RateLeft{
+  display: flex;
+  flex-direction: column;align-items: center;
+}
+.RateWrapper{
+    width:930px;
+    
+    border-radius: 13px;
+    background-color: none;
+    border: 6px solid rgba(250, 250, 250, 0.98);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TitleRateWrapper{
+    border-radius: 0 0 13px 13px;
+    width: 594px;
+    height: 62px;
+    background: rgba(250, 250, 250, 0.98);
+    position: absolute;
+    left: 168px;
+}
+
+.TitleRateWrapper h3{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+    color: #212121;
+    margin-top: 10px;
+}
+
+.RateWrapper > :nth-child(2) {
+    margin-top: 100px;
+  }
+
+  .RateWrapper > :last-child {
+    margin-bottom: 30px;
+  }
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 13px;
+    width: 95%;
+    height: 50px;
+    background: #384364;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.question p{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+color: rgba(250, 250, 250, 0.98);
+text-align: left;
+width: 395px;
+}
+
+.star-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .star-icon.active {
+    filter: invert(8%) sepia(97%) saturate(4715%) hue-rotate(86deg) brightness(90%) contrast(97%);
+    /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
+
+  }
+  
+  .star-label {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+
+  .WrapperStars{
+    width: 407px;
+    height: 49px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .WrapperStars img{
+    width: 47px;
+    height: 47px;
+    opacity: 0.7;
+  }
+
+  .AverageRate{
+    margin-top: 70px;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+  }
+  .AverageRate h3{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+color: #fff;
+margin-bottom: 15px;
+  }
+
+  .AverageCircle{
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  .AverageCircle h4{
+    font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  color: rgba(250, 250, 250, 0.98);
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .average-5 {
+    background-image: url('../../images/оценка5.svg');
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  .average-4 {
+    background-image: url('../../images/оценка4.svg');
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  .average-3 {
+    background-image: url('../../images/оценка3.svg');
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  .average-2 {
+    background-image: url('../../images/оценка2.svg');
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  
+  .average-1 {
+    background-image: url('../../images/оценка1.svg');
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+
+  .average-0 {
+    background-image: url('../../images/оценка0.svg');
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+
+  .star5{
+    fill: #00E116;
+  }
+  .star4{
+    fill: #1F820F;
+  }
+  .star3{
+    fill: #FC9926;
+  }
+  .star2{
+    fill: #A43B00;
+  }
+  .star1{
+    fill: #E10000;
+  }

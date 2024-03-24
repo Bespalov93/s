@@ -1,0 +1,25 @@
+.NextBtn{
+    border-radius: 13px;
+    width: 230px;
+    height: 63px;
+    background: rgba(250, 250, 250, 0.98);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    margin-top: 36px;
+}
+
+.dis{
+    border-radius: 13px;
+    width: 230px;
+    height: 63px;
+    background: rgba(250, 250, 250, 0.58);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    margin-top: 36px;
+}

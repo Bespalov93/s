@@ -1,0 +1,57 @@
+.FastAnswer h3{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #fafafa;
+    
+}
+
+.f1{
+    border-radius: 13px;
+    width: 275px;
+    height: 35px;
+    background: #1f820f;
+   margin: 10px;
+   position: relative;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.f2{
+    border-radius: 13px;
+    width: 275px;
+    height: 35px;
+    background: #1f820f;
+    margin: 10px;
+    position: relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.f3{
+    border-radius: 13px;
+    width: 275px;
+    height: 35px;
+    background: #5f5243;
+    margin: 10px;
+    position: relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.f4{
+    border-radius: 13px;
+    width: 275px;
+    height: 35px;
+    background: #a43b00;
+    margin: 10px;
+    position: relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

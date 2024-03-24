@@ -1,0 +1,87 @@
+.Main{
+	display: flex;
+	justify-content: space-around;
+}
+.Main section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.MainTitle{
+	border-radius: 13px;
+	width: 425px;
+	height: 60px;
+	background-color: #384364;
+	color: #EBEBEB;
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 24px;
+	text-align: center;
+	color: #ebebeb;
+	padding: 15px;
+	margin-bottom: 76px;
+}
+
+.MainOutline{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 6px solid rgba(250, 250, 250, 0.98);
+	border-radius: 13px;
+	width: 710px;
+	height: 206px;
+	background-color: none;
+}
+
+.MainP{
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 28px;
+	text-align: center;
+	color: #212121;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	position: absolute;
+	top: 50%; /* Расположение верхнего края на 50% высоты родителя */
+	left: 50%; /* Расположение левого края на 50% ширины родителя */
+	transform: translate(-50%, -50%); /* Сдвигаем элемент на половину его собственной ширины и высоты влево и вверх соответственно */
+	width:inherit;
+	
+}
+
+.MainDivWrapper{
+	border-radius: 0 0 13px 13px;
+	width: 590px;
+	height: 68px;
+	background: rgba(250, 250, 250, 0.98);
+	position: relative;
+}
+
+.MainOutline input{
+	border-radius: 13px;
+	background: #384364;
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 40px;
+	text-align: center;
+	color: rgba(250, 250, 250, 0.98);
+}
+
+.MainOutline .input1{
+	width: 315px;
+	height: 80px;
+	
+}
+
+.MainOutline .input2{
+	width: 212px;
+	height: 80px;
+}
+
+.MainGroupInputs{
+	width: 540px;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 24px;
+}

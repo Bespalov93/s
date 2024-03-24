@@ -1,0 +1,23 @@
+
+.QR{
+    border-radius: 13px;
+    width: 200px;
+    height: 260px;
+    background: #bac5ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.proezd{
+    width: 169px;
+    height: 169px;
+    margin: 15px;
+}
+.comment{
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    --font-family: "Montserrat", sans-serif;
+    margin: 0 ;
+}

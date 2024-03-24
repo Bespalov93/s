@@ -1,0 +1,55 @@
+.Comment{
+    display: flex;
+    justify-content: space-around;
+}
+.CommentWrapper{
+    border: 6px solid #fff;
+    border-radius: 13px;
+    width: 918px;
+    height: 310px;
+    background: none;
+    position: relative;
+}
+
+.div1{
+    margin-top: 107px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.CommentTitle h3{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 28px;
+text-align: center;
+color: #212121;
+position: relative;
+}
+
+.CommentTitle{
+    position: absolute;
+    left: 87px;
+    border-radius: 0 0 13px 13px;
+width: 744px;
+height: 80px;
+background: #fff;
+
+}
+
+.CommentInput{
+    border-radius: 13px;
+    width: 534px;
+    height: 95px;
+    background: #384364;
+    resize: none;
+    padding: 10px;
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 18px;
+color: #fafafa;
+}
+
+.CommentInput:focus {
+    outline: none; /* Убираем обводку при активном фокусе */
+  }

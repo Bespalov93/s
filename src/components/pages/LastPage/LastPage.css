@@ -1,0 +1,19 @@
+.Last .TY{
+    border-radius: 13px;
+width: 823px;
+height: 133px;
+box-shadow: 1px 4px 3px 0 rgba(0, 0, 0, 0.25);
+background: #007822;
+margin: 0 auto;
+
+}
+
+.h1Wrapper {
+    padding-top: 27px;
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 64px;
+text-align: center;
+color: rgba(250, 250, 250, 0.98);
+
+}
