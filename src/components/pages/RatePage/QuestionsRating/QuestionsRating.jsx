@@ -1,24 +1,37 @@
-// В новом файле QuestionRatings.jsx
+// QuestionRatings.jsx
 import React from "react";
-import star from '../../../images/Star 5.svg'
+import Star from '../../../images/Star 5.svg';
 
-const QuestionRatings = ({ data, ratings, handleRatingChange, getImageColor }) => {
+// Отображение одной звезды
+const StarIcon = ({ color, onClick }) => {
   return (
-    <div className='RateWrapper'>
-      <div className='TitleRateWrapper'> <h3>Оцените качество работы склада</h3> </div>
-      {data.map((item) => (
-        <div key={item.id} className="question">
+    <label className="star-label">
+      <img
+        src={Star}
+        alt="star"
+        className={`star-icon ${color}`}
+        onClick={onClick}
+      />
+    </label>
+  );
+};
+
+const QuestionRatings = ({ questions, ratings, handleRatingChange, getImageColor }) => {
+  return (
+    <div className="RateWrapper">
+      <div className="TitleRateWrapper">
+        <h3>Оцените качество работы склада</h3>
+      </div>
+      {questions.map((item, index) => (
+        <div key={index} className="question">
           <p>{item.question}</p>
-          <div className='WrapperStars'>
+          <div className="WrapperStars">
             {[1, 2, 3, 4, 5].map((rating) => (
-              <label key={rating} className="star-label">
-                <img
-                  src={star}
-                  alt={`star-${rating}`}
-                  className={`star-icon ${getImageColor(item.id, rating)}`}
-                  onClick={() => handleRatingChange(item.id, rating)}
-                />
-              </label>
+              <StarIcon
+                key={rating}
+                color={getImageColor(index, rating)}
+                onClick={() => handleRatingChange(index, rating)}
+              />
             ))}
           </div>
         </div>

@@ -8,34 +8,45 @@ import NextBtn from '../../NextBtn/NextBtn.jsx';
 import PreviousBtn from '../../PreviousBtn/PreviousBtn.jsx';
 import useCommentState from './useCommentState';
 import useLastChangeTime from './useLastChangeTime';
+import axios from 'axios';
 
 export default function RatePage() {
-    const { commentText, handleSelectFastAnswer, handleInputChange } = useCommentState();
-    const { lastChangeTime, setLastChangeTime } = useLastChangeTime();
+  const { commentText, handleSelectFastAnswer, handleInputChange } = useCommentState();
+  const { lastChangeTime, setLastChangeTime } = useLastChangeTime();
 
-    const handleClick = () => {
-      // Проверяем, что комментарий не пустой
-      if (commentText.trim() !== '') {
-        // Сохранение комментария в localStorage
-        localStorage.setItem('comment', commentText);
-
-        // Получение всех ключей из локального хранилища
-        const keys = Object.keys(localStorage);
-
-        // Перебор всех ключей и вывод соответствующих значений в консоль
-        keys.forEach(key => {
-          const value = localStorage.getItem(key);
-          console.log(`${key}: ${value}`);
-        });
-        localStorage.clear();
-      }
-
-      // Обновляем время последнего изменения
-      setLastChangeTime(Date.now());
-    };
-  
+  const isCommentNotEmpty = commentText.trim() !== ''; // Определение переменной isCommentNotEmpty здесь
+    
+  const handleClick = () => {
     // Проверяем, что комментарий не пустой
-    const isCommentNotEmpty = commentText.trim() !== '';
+    if (commentText.trim() !== '') {
+        // Получаем данные из localStorage
+        const storedData = {
+            car_number: localStorage.getItem('car_number') || "",
+            questions_answers: JSON.parse(localStorage.getItem('questions_answers')) || null,
+            average_rating: localStorage.getItem('average_rating') || null,
+            comment: localStorage.getItem('comment') || "",
+        };
+
+        // Отправляем POST запрос на сервер
+        axios.post('http://192.168.3.23:8000/feedback/send', storedData)
+            .then(response => {
+                console.log('Данные успешно отправлены на сервер');
+                // Обновляем время последнего изменения
+                setLastChangeTime(Date.now());
+            })
+            .catch(error => {
+                console.error('Произошла ошибка при отправке данных на сервер:', error);
+                // Ваша логика при неудачной отправке данных на сервер
+                // Например, вывод сообщения об ошибке или повторная попытка отправки данных
+                // Например:
+                alert('Ошибка при отправке данных на сервер. Пожалуйста, повторите попытку позже.');
+            });
+    } else {
+        console.log('Комментарий пустой');
+    }
+    localStorage.clear();
+};
+
 
     return (
       <AnimatedPage>
@@ -50,7 +61,7 @@ export default function RatePage() {
               </div>
             </div>
             {/* Делаем кнопку неактивной, если комментарий пустой */}
-            <PreviousBtn func={handleClick} Link='/feedback/rate'/>
+            {/* <PreviousBtn func={handleClick} Link='/feedback/rate'/> */}
             <NextBtn func={handleClick} Link='/feedback/last' par={!isCommentNotEmpty} />
           </section>
         </section>

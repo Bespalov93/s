@@ -8,6 +8,7 @@
 }
 .RateWrapper{
     width:930px;
+    min-height: 200px;
     
     border-radius: 13px;
     background-color: none;

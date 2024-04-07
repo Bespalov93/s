@@ -30,13 +30,8 @@ export default function useRatings(data) {
     const savedData = localStorage.getItem('questions_answers');
     if (savedData) {
       const parsedData = JSON.parse(savedData);
-      const loadedRatings = {};
-      data.forEach(item => {
-        loadedRatings[item.id] = parsedData[item.question] || 0;
-      });
-      setRatings(loadedRatings);
+      setRatings(parsedData);
     }
-
     const savedAverageRating = localStorage.getItem('average_rating');
     if (savedAverageRating) {
       setAverageRating(parseFloat(savedAverageRating));
@@ -44,11 +39,7 @@ export default function useRatings(data) {
   };
 
   const saveRatingsToLocal = () => {
-    const dataToSave = {};
-    data.forEach(item => {
-      dataToSave[item.question] = ratings[item.id] || 0;
-    });
-    localStorage.setItem('questions_answers', JSON.stringify(dataToSave));
+    localStorage.setItem('questions_answers', JSON.stringify(ratings));
     localStorage.setItem('average_rating', parseFloat(averageRating));
   };
 

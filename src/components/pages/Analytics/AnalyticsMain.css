@@ -1,0 +1,140 @@
+.link{
+    color: #000;
+    background-color: rgb(145, 145, 145);
+    border-radius: 9px;
+    padding: 5px;
+    margin: 7px;
+    transition: 0.13s ease-in-out;
+
+}
+.link:hover{
+    transform: scale(1.05);
+    font-weight: 600;
+}
+.analytics{
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.que{
+    width: 750px;
+    background-color: #D9D9D9;
+    padding: 10px;
+    cursor: default;
+    
+}
+
+.que li{
+    font-size: 18px;
+    text-align: left;
+    min-width: 570px;
+    background-color: black;
+    color: #D9D9D9;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.que li:hover{
+    transform: scale(1.02);
+}
+
+.que h3{
+    width: 450px;
+    min-height: 50px; 
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 15px;
+text-align: left;
+color: #fff;
+}
+
+.que h2{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+text-align: center;
+color: #000;
+}
+
+.que .score{
+    border-radius: 13px;
+    width: 53px;
+    height: 23px;
+    background: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+    margin-left: 10px;
+    padding: 1px;
+}
+
+.que p{
+    display: flex;
+}
+
+.last5{
+    margin-left: 20px;
+    width: 603px;
+
+    background: #d9d9d9;
+    padding-bottom: 12px;
+}
+
+.last5 h2{
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 24px;
+text-align: center;
+color: #000;
+}
+
+.last5 li{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    margin: 8px;
+}
+
+.sela{
+    color: aqua;
+}
+
+.last5 .carN{
+    width: 200px;
+    padding: 10px;
+}
+
+.last5 .avRate{
+    width: 200px;
+    padding: 10px;
+}
+
+.last5 .datePub{
+    width: 150px;
+    padding: 10px;
+}
+
+.last5 .link{
+    margin-bottom: 10px;
+}
+
+.avg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
